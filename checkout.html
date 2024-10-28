@@ -1,0 +1,63 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="midsty.css">
+</head>
+<body>
+  <div class="checkout-container">
+    <h2>Checkout</h2>
+    <form action="confirmation.html" method="POST" class="checkout-form">
+      <!-- Contact Information -->
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+      </div>
+
+      <!-- Payment Method -->
+      <div class="form-group">
+        <label>Payment Method:</label>
+        <div>
+          <input type="radio" id="creditCard" name="paymentMethod" value="Credit Card" required>
+          <label for="creditCard">Credit Card</label>
+        </div>
+        <div>
+          <input type="radio" id="paypal" name="paymentMethod" value="PayPal" required>
+          <label for="paypal">PayPal</label>
+        </div>
+        <div>
+          <input type="radio" id="cod" name="paymentMethod" value="Cash on Delivery" required>
+          <label for="cod">Cash on Delivery</label>
+        </div>
+      </div>
+
+      <!-- Total Amount (displayed only) -->
+      <div class="form-group">
+        <label>Total Amount:</label>
+        <p id="totalAmount">$100.00</p> <!-- Replace this value dynamically if needed -->
+      </div>
+
+      <!-- Confirm Order Button -->
+      <button type="submit" class="confirm-order-btn">Confirm Order</button>
+    </form>
+  </div>
+</body>
+</html>
